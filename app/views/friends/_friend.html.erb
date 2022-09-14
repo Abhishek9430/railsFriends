@@ -1,0 +1,17 @@
+
+<% if friend.user==current_user %>
+<div id="<%= dom_id friend %>">
+<tbody>
+<td><%=link_to friend.first_name+' '+friend.last_name, friend %></td>
+
+
+<td><%= friend.email %></td>
+
+<td><%= friend.phone %></td>
+
+<td><%= friend.twitter %></td>
+<td><%= friend.user_id %></td>
+<td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+</tbody>
+</div>
+<%end%>
